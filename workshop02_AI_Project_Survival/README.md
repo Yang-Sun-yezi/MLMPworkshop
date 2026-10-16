@@ -1,31 +1,33 @@
-#Project
+# Project
 
-Repository URL: https://github.com/richzhang/colorization.git
-
-Exact commit used: 4f6009ed1495b1300231ebeb41cc4015557ddef7
-
-Inference task: Real-Time User-Guided Image Colorization
+**Repository URL:** https://github.com/richzhang/colorization.git
 
 
+**Exact commit used:** 4f6009ed1495b1300231ebeb41cc4015557ddef7
 
 
-#Repo map
-
-Environment: requirements.txt
-
-Entry point: demo_release.py
-
-Model: Model loading in Python
-
-Input:/colorization/imgs/ansel_adams.jpg
-
-Output: /colorization/saved_eccv16.png
-/colorization/saved_siggraph17.png
+**Inference task:** Real-Time User-Guided Image Colorization
 
 
 
 
-#Environment setup
+# Repo map
+
+**Environment:** requirements.txt
+
+**Entry point:** demo_release.py
+
+**Model:** Model loading in Python
+
+**Input:** /colorization/imgs/ansel_adams.jpg
+
+**Output:** /colorization/saved_eccv16.png
+            /colorization/saved_siggraph17.png
+
+
+
+
+# Environment setup
 
 1. First, creat a new folder. eg:workshop02_project
 
@@ -38,49 +40,53 @@ git clone https://github.com/richzhang/colorization.git
 4. Enter the colorization: 
 cd colorization
 
-5. Create a virtual environment: 
-(1)open VS code, Ctrl+` open Terminl: 
-code .
+5. Create a virtual environment:
+    
+    (1)open VS code, Ctrl+` open Terminl: 
+    code .
+   
+    (2)Use an AI coding agent to determine a compatible Python version and avoid dependency conflicts, the AI told us which verison is beat to use:
+    
+    Inspect this repository and its README.
+    Do not install anything.
+    Do not modify any files.
+    Do not create or change a virtual environment.
+    Based on the repository files, README, dependency files, and package version requirements:
+    1. Which Python version should I use for this project?
+    2. Which Python version is least likely to cause dependency conflicts?
+    Give me one recommended Python version and briefly explain why.
 
-(2)Use an AI coding agent to determine a compatible Python version and avoid dependency conflicts, the AI told us which verison is beat to use:
+    (3)The AI told me the best version to use is Python 3.8:
+    
+    uv venv --python 3.8
 
-Inspect this repository and its README.
-Do not install anything.
-Do not modify any files.
-Do not create or change a virtual environment.
-Based on the repository files, README, dependency files, and package version requirements:
-1. Which Python version should I use for this project?
-2. Which Python version is least likely to cause dependency conflicts?
-Give me one recommended Python version and briefly explain why.
+    (4)Activate the environment:
+   
+    source .venv/bin/activate
 
-(3)The AI told me the best version to use is Python 3.8: 
-uv venv --python 3.8
+    (5)Check where Python is installed-it should ususally point to the .venv directory:
+   
+    which python
 
-(4)Activate the environment: 
-source .venv/bin/activate
-
-(5)Check where Python is installed-it should ususally point to the .venv directory:
-which python
-
-(6)Check the installed Python version:
-python --version
+    (6)Check the installed Python version:
+   
+    python --version
 
 6. Install the dependencies(This process takes a while, please wait patiently):
-python3.8 -m ensurepip --upgrade
-python3.8 -m pip install torch scikit-image numpy matplotlib pillow ipython
+   
+    python3.8 -m ensurepip --upgrade
+   
+    python3.8 -m pip install torch scikit-image numpy matplotlib pillow ipython
 
 
 
 
-#Inference
+# Inference
 
 python3.8 demo_release.py -i imgs/ansel_adams.jpg
 
 
-
-
-
-#One real failure
+# One real failure
 
 **Category:** 
 ModuleNotFoundError
@@ -89,25 +95,25 @@ ModuleNotFoundError
 The virtual environment created by 'uv venv' does not include the pip tool by default, so running 'pip install requirements.txt' failed with 'No module named pip'. 
 
 **Minimal fix:** 
-(1)Manually install the pip tool:
-python -m ensurepip --upgrade
+    (1)Manually install the pip tool:
+    python -m ensurepip --upgrade
 
-(2)Manually install the project's dependencies:
-python -m pip install torch scikit-image numpy matplotlib Pillow ipython
-
-
+    (2)Manually install the project's dependencies:
+    python -m pip install torch scikit-image numpy matplotlib Pillow ipython
 
 
 
-#AI agent check
+
+
+# AI agent check
 
 **Which AI coding agent did you use?:**
 GitHub Copilot Chat
 
 **What did it change?:**
-(1)It diagnosed the cause of the dependency installation failure.
-(2)It provide the correct installation commands.
-(3)
+    (1)It diagnosed the cause of the dependency installation failure.
+    (2)It provide the correct installation commands.
+
 
 **How did you verify the change?:** 
 
@@ -221,7 +227,6 @@ python3.8 -m pip install torch scikit-image numpy matplotlib pillow ipython
 
 Then I run it again in new folder.
 Successful!
-
 
 
 
